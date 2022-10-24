@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>cy.handsOn('testing-library')</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      h1 {
+        color: darkslategrey
+      }
+      input {
+        display: block;
+        margin: 8px 0;
+      }
+      input[type="submit"] {
+        font-weight: bold;
+        padding: 6px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>cy.findByTestId('tat')</h1>
+    <form>
+      <label>Username</label>
+      <input type="text" name="username" id="username" data-cy="username-login-field">
+      <label>Password</label>
+      <input type="password" name="password" id="password" data-cy="password-login-field">
+      <input type="submit" value="Login" data-cy="login-button">
+    </form>
+    <script>
+      const username = document.getElementById('username')
+      const password = document.getElementById('password')
+      document.querySelector('input[type="submit"]')
+        .addEventListener('click', event => {
+          event.preventDefault()
+          if (!username.value || !password.value) return
+          document.querySelector('body').innerHTML = "<p>You're logged in.</p>"
+        })
+    </script>
+  </body>
+</html>

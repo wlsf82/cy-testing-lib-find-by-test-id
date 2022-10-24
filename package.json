@@ -1,0 +1,21 @@
+{
+  "name": "cy-testing-lib-find-by-test-id",
+  "version": "1.0.0",
+  "description": "Sample project to demonstrate the usage of the cy.findByTestId() command of the @testing-library/cypress lib.",
+  "main": "src/index.html",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "testing-library",
+    "cypress.io",
+    "talking-about-testing"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
+    "cypress": "^10.10.0"
+  }
+}
